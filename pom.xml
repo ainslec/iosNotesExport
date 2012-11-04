@@ -1,0 +1,127 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.consoli.tools</groupId>
+  <artifactId>ios-note-export</artifactId>
+  <packaging>jar</packaging>
+  <version>1.0</version>
+  <name>ios-note-export</name>
+  <url>http://maven.apache.org</url>
+  
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.5</source>
+					<target>1.5</target>
+				</configuration>
+			</plugin>
+			
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-shade-plugin</artifactId>
+				<version>1.4</version>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>shade</goal>
+						</goals>
+            <configuration>
+              <transformers>
+                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                  <mainClass>org.consoli.tools.ios.noteexport.IosNoteExport</mainClass>
+                </transformer>
+              </transformers>
+            </configuration>
+					</execution>
+				</executions>
+				<configuration>
+					<shadedArtifactAttached>true</shadedArtifactAttached> <!-- Make the shaded artifact not the main one -->
+					<shadedClassifierName>full</shadedClassifierName> <!-- set the suffix to the shaded jar -->
+				</configuration>
+			</plugin>
+			
+<plugin>
+    <groupId>org.bluestemsoftware.open.maven.plugin</groupId>
+    <artifactId>launch4j-plugin</artifactId>
+    <version>1.5.0.0</version>
+    <executions>
+
+        <!-- GUI exe -->
+        <execution>
+            <id>ios-note-export-gui</id>
+            <phase>package</phase>
+            <goals>
+                <goal>launch4j</goal>
+            </goals>
+            <configuration>
+                <headerType>gui</headerType>
+                <outfile>target/iOS Note Exporter.exe</outfile>
+                <jar>target/${artifactId}-${version}-full.jar</jar> <!-- 'full' is the value set on shadedClassifierName above -->
+                <errTitle>Problem occured during trying to export iOS Notes</errTitle>
+                <classPath>
+                    <mainClass>org.consoli.tools.ios.noteexport.IosNoteExport</mainClass>
+                </classPath>
+                <icon>src/main/resources/icons/exeIcon.ico</icon>
+                <jre>
+                    <minVersion>1.5.0</minVersion>
+                    <maxVersion>1.7.0</maxVersion>
+                    <initialHeapSize>128</initialHeapSize>
+                    <maxHeapSize>512</maxHeapSize>
+                </jre>
+                <versionInfo>
+                    <fileVersion>1.0.0.0</fileVersion>
+                    <txtFileVersion>1.0.0.0</txtFileVersion>
+                    <fileDescription>Desc</fileDescription>
+                    <copyright>Consoli Limited</copyright>
+                    <productVersion>1.0.0.0</productVersion>
+                    <txtProductVersion>1.0.0.0</txtProductVersion>
+                    <productName>iOS Note Exporter</productName>
+                    <internalName>Project Ram</internalName>
+                    <originalFilename>iOS Note Exporter.exe</originalFilename>
+                </versionInfo>
+            </configuration>
+        </execution>
+
+
+		</executions>
+	</plugin>
+			
+			
+		</plugins>
+
+	</build>
+	
+	<developers>
+		<developer>
+			<id>ainsleyc</id>
+			<name>Chris Ainsley</name>
+			<email>chris.ainsley@consoli-ltd.com</email>
+		</developer>
+	</developers>
+
+	<inceptionYear>2012</inceptionYear>
+	
+  <dependencies>
+
+    <dependency>
+      <groupId>org.xerial</groupId>
+      <artifactId>sqlite-jdbc</artifactId>
+      <version>3.6.16</version>
+    </dependency>
+
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+</project>
