@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=640" />
+
+    <link rel="stylesheet" href="stylesheets/core.css" media="screen"/>
+    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)"/>
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css"/>
+
+    <script type="text/javascript" src="javascripts/modernizr.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('#main_content').headsmart()
+      })
+    </script>
+    <title>iOS Notes Export by takapa</title>
+  </head>
+
+  <body>
+    <a id="forkme_banner" href="https://github.com/takapa/iosNotesExport">View on GitHub</a>
+    <div class="shell">
+
+      <header>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <h1>iOS Notes Export</h1>
+            <h2>Small Utility to export iOS notes to CSV file</h2>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+      </header>
+
+      <section id="downloads">
+        <span class="inner">
+          <a href="https://github.com/takapa/iosNotesExport/zipball/master" class="zip"><em>download</em> .ZIP</a><a href="https://github.com/takapa/iosNotesExport/tarball/master" class="tgz"><em>download</em> .TGZ</a>
+        </span>
+      </section>
+
+
+      <span class="banner-fix"></span>
+
+
+      <section id="main_content">
+        <h1>ios-note-export</h1>
+
+<p>Simple tool that can be used export notes from (unencrypted) iTunes backup files to CSV files.
+As Apple does not provide a mechanism for exporting notes, I found myself facing the daunting
+task of copying and pasting hundreds of notes. Instead, I switched my iTunes backup to be
+unencrypted and performed a plain text search of the database and found the notes to be in
+SQLite format.</p>
+
+<h1>Pre-requisites:</h1>
+
+<p>You should have iTunes installed for the user executing the export tool, and that iTunes
+should be synched to the iPhone/iPad in question. The backup should NOT be encrypted. If it
+is encrypted, be sure to switch of encryption then re-sync.</p>
+
+<h1>Usage:</h1>
+
+<p>1) Make sure you have a JRE installed : <a href="http://www.java.com/en/download/index.jsp">http://www.java.com/en/download/index.jsp</a><br>
+2) If Windows User, double click "iOS Note Exporter.exe". If on other platforms, double click the .jar file.<br>
+3) Select the folder containing the backup .... <br>
+      If on Windows, the iTunes backup folder is &lt;&gt;/AppData/Roaming/Apple Computer/...<br>
+      If on OSX, then iTunes backup folder is usually : ~/Library/Application Support/MobileSync/Backup/<br> 
+4) If notes are found, select a folder to output the CSVs.<br>
+5) Finished.</p>
+
+<h1>License</h1>
+
+<ul>
+<li>Copyright 2012 Consoli Limited</li>
+<li>
+<li>Licensed to the Apache Software Foundation (ASF) under one or more</li>
+<li>contributor license agreements.  See the NOTICE file distributed with</li>
+<li>this work for additional information regarding copyright ownership.</li>
+<li>The ASF licenses this file to You under the Apache License, Version 2.0</li>
+<li>(the "License"); you may not use this file except in compliance with</li>
+<li>the License.  You may obtain a copy of the License at
+*</li>
+<li>     <a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a>
+*</li>
+<li>Unless required by applicable law or agreed to in writing, software</li>
+<li>distributed under the License is distributed on an "AS IS" BASIS,</li>
+<li>WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</li>
+<li>See the License for the specific language governing permissions and</li>
+<li>limitations under the License.</li>
+</ul><h1>Open Source Credits:</h1>
+
+<p>Utilizes the SQLite JDBC Driver (Apache License) -- <a href="http://www.xerial.org">http://www.xerial.org</a><br>
+Silk Icons (Free usage) -- <a href="http://www.famfamfam.com">http://www.famfamfam.com</a><br>
+Launch4J (BSD License, GNU General Public License version 2.0 (GPLv2), GNU Library or Lesser General Public License version 2.0 (LGPLv2), MIT License) -- <a href="http://sourceforge.net/projects/launch4j/">http://sourceforge.net/projects/launch4j/</a><br></p>
+
+<h1>Changelog</h1>
+
+<p>1.0.0 -- First Release, may be bugs.</p>
+      </section>
+
+      <footer>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <p>this project by <a href="https://github.com/takapa">takapa</a> can be found on <a href="https://github.com/takapa/iosNotesExport">GitHub</a></p>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+        <p>Generated with <a href="http://pages.github.com">GitHub Pages</a> using Merlot</p>
+        <span class="octocat"></span>
+      </footer>
+
+    </div>
+
+    
+  </body>
+</html>
