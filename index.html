@@ -1,43 +1,36 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
+
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>iOS Notes Export by takapa</title>
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/respond.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <!--[if lt IE 8]>
-    <link rel="stylesheet" href="stylesheets/ie.css">
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="iOS Notes Export : Small Utility to export iOS notes to CSV file" />
 
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>iOS Notes Export</title>
   </head>
+
   <body>
-      <div id="header">
-        <nav>
-          <li class="fork"><a href="https://github.com/takapa/iosNotesExport">View On GitHub</a></li>
-          <li class="downloads"><a href="https://github.com/takapa/iosNotesExport/zipball/master">ZIP</a></li>
-          <li class="downloads"><a href="https://github.com/takapa/iosNotesExport/tarball/master">TAR</a></li>
-          <li class="title">DOWNLOADS</li>
-        </nav>
-      </div><!-- end header -->
 
-    <div class="wrapper">
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/takapa/iosNotesExport">View on GitHub</a>
 
-      <section>
-        <div id="title">
-          <h1>iOS Notes Export</h1>
-          <p>Small Utility to export iOS notes to CSV file</p>
-          <hr>
-          <span class="credits left">Project maintained by <a href="https://github.com/takapa">takapa</a></span>
-          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></span>
-        </div>
+          <h1 id="project_title">iOS Notes Export</h1>
+          <h2 id="project_tagline">Small Utility to export iOS notes to CSV file</h2>
 
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/takapa/iosNotesExport/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/takapa/iosNotesExport/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
         <h1>ios-note-export</h1>
 
 <p>Simple tool that can be used export notes from (unencrypted) iTunes backup files to CSV files. The tool scans the iTunes backup of the device and locates the file containing the notes then converts the notes into a sane format.</p>
@@ -50,9 +43,9 @@ is encrypted, be sure to switch of encryption then re-sync.</p>
 
 <h1>Download</h1>
 
-<p><a href="https://github.com/downloads/takapa/iosNotesExport/ios%20Notes%20Exporter%201.0.0%20Windows.zip">Windows</a></p>
+<p><a href="https://sourceforge.net/projects/iosnotesexport/files/ios%20Notes%20Exporter%201.0.1%20Windows.zip/download">Windows</a></p>
 
-<p><a href="https://github.com/downloads/takapa/iosNotesExport/ios%20Notes%20Exporter%201.0.0%20All%20OS.zip">OS Independent</a></p>
+<p><a href="http://sourceforge.net/projects/iosnotesexport/files/ios%20Notes%20Exporter%201.0.1%20All%20OS.zip/download">OS Independent</a></p>
 
 <h1>Usage:</h1>
 
@@ -91,11 +84,21 @@ Launch4J (BSD License, GNU General Public License version 2.0 (GPLv2), GNU Libra
 
 <h1>Changelog</h1>
 
-<p>1.0.0 -- First Release, may be bugs.</p>
+<ul>
+<li>1.0.0 -- Nov  3, 2012 : First Release, may be bugs.</li>
+<li>1.0.1 -- Mar  4, 2013 : Fixed headings on exported CSV file (were not aligned to the detailed records).</li>
+</ul>
       </section>
-
     </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">iOS Notes Export maintained by <a href="https://github.com/takapa">takapa</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
               <script type="text/javascript">
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
             document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
@@ -106,6 +109,7 @@ Launch4J (BSD License, GNU General Public License version 2.0 (GPLv2), GNU Libra
             pageTracker._trackPageview();
             } catch(err) {}
           </script>
+
 
   </body>
 </html>
