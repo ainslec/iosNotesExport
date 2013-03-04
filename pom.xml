@@ -4,7 +4,7 @@
   <groupId>org.consoli.tools</groupId>
   <artifactId>ios-note-export</artifactId>
   <packaging>jar</packaging>
-  <version>1.0</version>
+  <version>1.0.1</version>
   <name>ios-note-export</name>
   <url>http://maven.apache.org</url>
   
@@ -77,12 +77,12 @@
                     <maxHeapSize>512</maxHeapSize>
                 </jre>
                 <versionInfo>
-                    <fileVersion>1.0.0.0</fileVersion>
-                    <txtFileVersion>1.0.0.0</txtFileVersion>
+                    <fileVersion>1.0.1.0</fileVersion>
+                    <txtFileVersion>1.0.1.0</txtFileVersion>
                     <fileDescription>Desc</fileDescription>
                     <copyright>Consoli Limited</copyright>
-                    <productVersion>1.0.0.0</productVersion>
-                    <txtProductVersion>1.0.0.0</txtProductVersion>
+                    <productVersion>1.0.1.0</productVersion>
+                    <txtProductVersion>1.0.1.0</txtProductVersion>
                     <productName>iOS Note Exporter</productName>
                     <internalName>Project Ram</internalName>
                     <originalFilename>iOS Note Exporter.exe</originalFilename>

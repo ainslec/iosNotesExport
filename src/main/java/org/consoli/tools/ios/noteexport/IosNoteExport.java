@@ -179,7 +179,7 @@ public class IosNoteExport {
 			statement
 					.execute("select datetime(ZCREATIONDATE + 978307200 ,'unixepoch', 'localtime') as CreationDate, datetime(ZMODIFICATIONDATE + 978307200 ,'unixepoch', 'localtime') as ModificationDate, ZTITLE as Title, (ZCONTENT) as Content,ZNOTE.Z_PK as Z_PK, ZCREATIONDATE, ZMODIFICATIONDATE from ZNOTE, ZNOTEBODY where ZNOTE.ZBODY = ZNOTEBODY.Z_PK order by ZMODIFICATIONDATE");
 			ResultSet rs = statement.getResultSet();
-			String headerLine = createCsvLine("Z_PK", "ZCREATIONDATE", "ZMODIFICATIONDATE", "CreationDate","ModificationDate","Title","Content");
+			String headerLine = createCsvLine( "CreationDate","ModificationDate","Title","Content", "Z_PK", "ZCREATIONDATE","ZMODIFICATIONDATE");
 			w.write(headerLine);
 			
 			while (rs.next()) {
